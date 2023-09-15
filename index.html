@@ -1,9 +1,59 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>My Landing Page</title>
-    </head>
-    <body>
-        <h1>It's an ice cream.</h1>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo.jpg" alt="logo" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textbox">
+                <h2>It's not just fresh juice<br>It's <span>MOJITO</span></h2>
+                <p>
+                    A mojito is a classic highball drink that originated in Cuba. 
+                    Not surprisingly, this cocktail uses ingredients indigenous to Cuba, 
+                    including rum, lime, mint, and sugar. The mixture is topped off with a 
+                    little club soda to create a thirst-quenching libation. <br>It requires a bit 
+                    more labor than many mixed drinks, as it involves first muddling fresh mint, lime, 
+                    and sugar together to release the flavors. But it's well worth it for a refreshing, 
+                    fizzy, and mildly sweet rum cocktail that remains one of the most popular to this day. 
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="img1.png" class="mojito">
+            </div>
+        </div>
+        <ul class="flavor">
+            <li><img src="flavor1.png" onclick="imgSlider('img1.png');changeCircleColor('#41A317')"></li>
+            <li><img src="flavor2.png" onclick="imgSlider('img2.png');changeCircleColor('#b042f5')"></li>
+            <li><img src="flavor3.png" onclick="imgSlider('img3.png');changeCircleColor('#D63232')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png"></a></li>
+            <li><a href="#"><img src="twitter.png"></a></li>
+            <li><a href="#"><img src="instagram.png"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.mojito').src = anything;
+        }
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
 </html>
